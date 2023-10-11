@@ -37,9 +37,11 @@ export default function Home() {
       {<Text style={{ fontSize: 30 }}>Foto de Hoy</Text>}
       <TodayImage {...todaysImage} />
       {<Text style={{ fontSize: 30, paddingTop: 20 }}>Ultimas 5 fotos</Text>}
-      <ScrollView style={{ }}>
+      <ScrollView style={{maxHeight: '30%'}}>
         {fiveImages.map((item, index) => (
+          <View key={index}>
           <TodayImage {...item} />
+          </View>
         ))}
       </ScrollView>
     </View>
